@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Gallery</title>
+  <style>
+    /* Basic styling for the gallery container */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Auto-fill grid with responsive columns */
+      gap: 16px;
+      padding: 20px;
+      justify-items: center;
+    }
+
+    /* Style for individual images */
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    /* Hover effect on images */
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Optional caption under the images (not necessary, but you can add it) */
+    .gallery-item figcaption {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 8px;
+      color: #333;
+    }
+
+    /* Responsive design tweaks */
+    @media (max-width: 768px) {
+      .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align: center; margin-top: 20px;">Responsive Image Gallery</h1>
+
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="forest.png" alt="Image 1">
+      <figcaption>Image 1</figcaption>
+    </div>
+    <div class="gallery-item">
+      <img src="mountain.jpg" alt="Image 2">
+      <figcaption>Image 2</figcaption>
+    </div>
+    <div class="gallery-item">
+      <img src="kiara.jpg" alt="Image 3">
+      <figcaption>Image 3</figcaption>
+    </div>
+    <div class="gallery-item">
+      <img src="elvish.jpg" alt="Image 4">
+      <figcaption>Image 4</figcaption>
+    </div>
+    <div class="gallery-item">
+      <img src="shahid.jpg" alt="Image 5">
+      <figcaption>Image 5</figcaption>
+    </div>
+    <div class="gallery-item">
+      <img src="carry.jpg" alt="Image 6">
+      <figcaption>Image 6</figcaption>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Sidebar</title>
+    <style>
+        :root {
+            --sidebar-bg: #2c3e50;
+            --sidebar-hover: #34495e;
+            --text-color: #ecf0f1;
+            --accent-color: #3498db;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f5f5f5;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: var(--sidebar-bg);
+            color: var(--text-color);
+            padding: 20px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        .sidebar h2 {
+            margin-top: 0;
+            font-size: 24px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        .sidebar nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar nav ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.2s ease;
+        }
+        .sidebar nav ul li a:hover {
+            background-color: var(--sidebar-hover);
+            transform: translateX(5px);
+        }
+        .sidebar nav ul li a::before {
+            content: '▶';
+            margin-right: 10px;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        .sidebar nav ul li a:hover::before {
+            color: var(--accent-color);
+        }
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar" role="navigation" aria-label="Main Navigation">
+        <h2>Sidebar</h2>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <h1>Main Content Area</h1>
+        <p>This is where the main content of your page would go. The sidebar now has enhanced styling and hover effects.</p>
+    </main>
+</body>
+</html>
